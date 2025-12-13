@@ -32,7 +32,8 @@ export default function Footer() {
             </p>
           </div>
         </div>
-        <div className="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-400">
+        <div className="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-400 space-y-2">
+          <p className="text-yellow-400 font-semibold">※ これはサンプルで作成されたHPのため、実在しません</p>
           <p>&copy; 2024 株式会社ボイジャータナカ All rights reserved.</p>
         </div>
       </div>
