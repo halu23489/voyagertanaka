@@ -47,62 +47,96 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          {/* 星型レイアウト */}
-          <div className="relative min-h-[1100px] flex items-center justify-center my-20 pt-20">
-            {/* 中央の円 */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-48 h-48 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full shadow-2xl flex items-center justify-center">
-                <div className="text-center">
-                  <p className="text-white font-bold text-xl mb-2">5つの事業</p>
-                  <p className="text-white text-sm">で未来を創造</p>
-                </div>
+          {/* 中央の円 */}
+          <div className="flex justify-center mb-12">
+            <div className="w-48 h-48 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full shadow-2xl flex items-center justify-center">
+              <div className="text-center">
+                <p className="text-white font-bold text-xl mb-2">5つの事業</p>
+                <p className="text-white text-sm">で未来を創造</p>
               </div>
             </div>
+          </div>
 
-            {/* 星型に配置された事業カード */}
-            {services.map((service, index) => {
-              const angle = (index * 72 - 90) * (Math.PI / 180); // 星型の角度計算
-              const radius = 400; // 中心からの距離
-              const x = Math.cos(angle) * radius;
-              const y = Math.sin(angle) * radius;
-              
-              return (
-                <div 
-                  key={index}
-                  className="absolute w-72 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105"
-                  style={{
-                    left: '50%',
-                    top: '50%',
-                    transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`
-                  }}
-                >
-                  <div className="p-6">
-                    <div className="flex flex-col items-center gap-3 mb-4">
-                      <span className="text-5xl">{service.icon}</span>
-                      <h2 className="text-xl font-bold text-gray-900 text-center">
-                        {service.title}
-                      </h2>
-                    </div>
-                    
-                    <p className="text-gray-700 leading-relaxed mb-4 text-sm">
-                      {service.description}
-                    </p>
-                    
-                    <div className="border-t border-gray-200 pt-3">
-                      <h3 className="text-xs font-semibold text-gray-600 mb-2">主なサービス</h3>
-                      <ul className="space-y-1">
-                        {service.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-start">
-                            <span className="text-blue-600 mr-1 text-xs mt-0.5">✓</span>
-                            <span className="text-gray-700 text-xs">{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
+          {/* PC: 星型レイアウト / スマホ: 縦並びレイアウト */}
+          <div className="hidden lg:block">
+            <div className="relative min-h-[1100px] flex items-center justify-center my-20">
+              {services.map((service, index) => {
+                const angle = (index * 72 - 90) * (Math.PI / 180);
+                const radius = 400;
+                const x = Math.cos(angle) * radius;
+                const y = Math.sin(angle) * radius;
+                
+                return (
+                  <div 
+                    key={index}
+                    className="absolute w-72 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105"
+                    style={{
+                      left: '50%',
+                      top: '50%',
+                      transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`
+                    }}
+                  >
+                    <div className="p-6">
+                      <div className="flex flex-col items-center gap-3 mb-4">
+                        <span className="text-5xl">{service.icon}</span>
+                        <h2 className="text-xl font-bold text-gray-900 text-center">
+                          {service.title}
+                        </h2>
+                      </div>
+                      
+                      <p className="text-gray-700 leading-relaxed mb-4 text-sm">
+                        {service.description}
+                      </p>
+                      
+                      <div className="border-t border-gray-200 pt-3">
+                        <h3 className="text-xs font-semibold text-gray-600 mb-2">主なサービス</h3>
+                        <ul className="space-y-1">
+                          {service.features.map((feature, idx) => (
+                            <li key={idx} className="flex items-start">
+                              <span className="text-blue-600 mr-1 text-xs mt-0.5">✓</span>
+                              <span className="text-gray-700 text-xs">{feature}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
                   </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* スマホ・タブレット用の縦並びレイアウト */}
+          <div className="lg:hidden space-y-6">
+            {services.map((service, index) => (
+              <div 
+                key={index}
+                className="bg-white rounded-xl shadow-lg p-6"
+              >
+                <div className="flex flex-col items-center gap-3 mb-4">
+                  <span className="text-5xl">{service.icon}</span>
+                  <h2 className="text-xl font-bold text-gray-900 text-center">
+                    {service.title}
+                  </h2>
                 </div>
-              );
-            })}
+                
+                <p className="text-gray-700 leading-relaxed mb-4 text-sm">
+                  {service.description}
+                </p>
+                
+                <div className="border-t border-gray-200 pt-3">
+                  <h3 className="text-xs font-semibold text-gray-600 mb-2">主なサービス</h3>
+                  <ul className="space-y-1">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start">
+                        <span className="text-blue-600 mr-1 text-xs mt-0.5">✓</span>
+                        <span className="text-gray-700 text-xs">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
           </div>
 
           <div className="mt-16 text-center bg-white rounded-lg shadow-md p-8">
