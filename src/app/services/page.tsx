@@ -1,36 +1,42 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function ServicesPage() {
   const services = [
     {
       title: "総合コンサルティング事業",
       icon: "💼",
+      image: "/consaru.png",
       description: "企業の課題解決から成長戦略まで、あらゆるビジネスシーンをサポート。経営戦略、業務改善、事業開発など、お客様の目標達成に向けた最適なソリューションをご提案いたします。",
       features: ["経営戦略立案", "業務改善コンサルティング", "事業開発支援", "組織改革サポート"]
     },
     {
       title: "建設・土木事業",
       icon: "🏗️",
+      image: "/sekokanri.png",
       description: "土木施工管理と測量技術を駆使し、安全で高品質な建設プロジェクトを実現。豊富な経験と確かな技術力で、インフラ整備から建築工事まで幅広く対応いたします。",
       features: ["土木施工管理", "測量業務", "工事監理", "品質管理"]
     },
     {
       title: "IT開発事業",
       icon: "💻",
+      image: "/logo.jpg",
       description: "小規模から中規模まで、お客様のニーズに合わせたシステム開発を提供。Webアプリケーション、業務システム、モバイルアプリなど、最新技術を活用した開発を行います。",
       features: ["Webアプリケーション開発", "業務システム構築", "システム保守・運用", "ITコンサルティング"]
     },
     {
       title: "経理サポート事業",
       icon: "📊",
+      image: "/background.png",
       description: "帳簿作成から経理業務まで、企業の財務管理を徹底サポート。正確で迅速な処理により、経営者の負担を軽減し、本業に集中できる環境を提供いたします。",
       features: ["帳簿作成代行", "月次決算サポート", "経理業務アウトソーシング", "財務分析レポート"]
     },
     {
       title: "グルメ批評事業",
       icon: "🍽️",
+      image: "/food.png",
       description: "飲食店の魅力を多角的に評価・発信。プロの視点から料理、サービス、雰囲気を総合的に分析し、お店の価値を最大限に引き出すレビューやコンサルティングを提供します。",
       features: ["飲食店レビュー", "メニュー開発アドバイス", "店舗コンサルティング", "グルメ情報発信"]
     }
@@ -70,13 +76,21 @@ export default function ServicesPage() {
                 return (
                   <div 
                     key={index}
-                    className="absolute w-72 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105"
+                    className="absolute w-72 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 overflow-hidden"
                     style={{
                       left: '50%',
                       top: '50%',
                       transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`
                     }}
                   >
+                    <div className="relative w-full h-40">
+                      <Image
+                        src={service.image}
+                        alt={service.title}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
                     <div className="p-6">
                       <div className="flex flex-col items-center gap-3 mb-4">
                         <span className="text-5xl">{service.icon}</span>
@@ -122,14 +136,25 @@ export default function ServicesPage() {
             {services.map((service, index) => (
               <div 
                 key={index}
-                className="bg-white rounded-xl shadow-lg p-6"
+                className="bg-white rounded-xl shadow-lg overflow-hidden"
               >
-                <div className="flex flex-col items-center gap-3 mb-4">
-                  <span className="text-5xl">{service.icon}</span>
-                  <h2 className="text-xl font-bold text-gray-900 text-center">
-                    {service.title}
-                  </h2>
+                {/* 画像 */}
+                <div className="relative w-full h-40">
+                  <Image 
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
+
+                <div className="p-6">
+                  <div className="flex flex-col items-center gap-3 mb-4">
+                    <span className="text-5xl">{service.icon}</span>
+                    <h2 className="text-xl font-bold text-gray-900 text-center">
+                      {service.title}
+                    </h2>
+                  </div>
                 
                 <p className="text-gray-700 leading-relaxed mb-4 text-sm">
                   {service.description}
@@ -156,6 +181,7 @@ export default function ServicesPage() {
                     </Link>
                   </div>
                 )}
+                </div>
               </div>
             ))}
           </div>
