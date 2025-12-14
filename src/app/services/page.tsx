@@ -22,7 +22,7 @@ export default function ServicesPage() {
     {
       title: "IT開発事業",
       icon: "💻",
-      image: "/logo.jpg",
+      image: "/it.png",
       description: "小規模から中規模まで、お客様のニーズに合わせたシステム開発を提供。Webアプリケーション、業務システム、モバイルアプリなど、最新技術を活用した開発を行います。",
       features: ["Webアプリケーション開発", "業務システム構築", "システム保守・運用", "ITコンサルティング"]
     },
@@ -114,10 +114,10 @@ export default function ServicesPage() {
                           ))}
                         </ul>
                       </div>
-                      {(index === 0 || index === 1 || index === 3 || index === 4) && (
+                      {(index === 0 || index === 1 || index === 2 || index === 3 || index === 4) && (
                         <div className="mt-3 pt-3 border-t border-gray-200">
                           <Link 
-                            href={index === 0 ? "/services/consulting" : index === 1 ? "/services/construction" : index === 3 ? "/services/accounting" : "/services/gourmet"}
+                            href={index === 0 ? "/services/consulting" : index === 1 ? "/services/construction" : index === 2 ? "/services/it" : index === 3 ? "/services/accounting" : "/services/gourmet"}
                             className="block text-center text-blue-600 hover:text-blue-800 font-semibold text-sm"
                           >
                             詳しく見る →
@@ -171,10 +171,10 @@ export default function ServicesPage() {
                     ))}
                   </ul>
                 </div>
-                {(index === 0 || index === 1 || index === 3 || index === 4) && (
+                {(index === 0 || index === 1 || index === 2 || index === 3 || index === 4) && (
                   <div className="mt-4 pt-4 border-t border-gray-200">
                     <Link 
-                      href={index === 0 ? "/services/consulting" : index === 1 ? "/services/construction" : index === 3 ? "/services/accounting" : "/services/gourmet"}
+                      href={index === 0 ? "/services/consulting" : index === 1 ? "/services/construction" : index === 2 ? "/services/it" : index === 3 ? "/services/accounting" : "/services/gourmet"}
                       className="block text-center text-blue-600 hover:text-blue-800 font-semibold text-sm"
                     >
                       詳しく見る →
