@@ -1,5 +1,6 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import Link from 'next/link'
 
 export default function ServicesPage() {
   const services = [
@@ -99,6 +100,16 @@ export default function ServicesPage() {
                           ))}
                         </ul>
                       </div>
+                      {index === 1 && (
+                        <div className="mt-4 pt-4 border-t border-gray-200">
+                          <Link 
+                            href="/services/construction"
+                            className="block text-center text-blue-600 hover:text-blue-800 font-semibold text-sm"
+                          >
+                            詳しく見る →
+                          </Link>
+                        </div>
+                      )}
                     </div>
                   </div>
                 );
@@ -135,6 +146,16 @@ export default function ServicesPage() {
                     ))}
                   </ul>
                 </div>
+                {index === 1 && (
+                  <div className="mt-4 pt-4 border-t border-gray-200">
+                    <Link 
+                      href="/services/construction"
+                      className="block text-center text-blue-600 hover:text-blue-800 font-semibold text-sm"
+                    >
+                      詳しく見る →
+                    </Link>
+                  </div>
+                )}
               </div>
             ))}
           </div>
