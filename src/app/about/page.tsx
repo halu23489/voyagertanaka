@@ -67,12 +67,30 @@ export default function AboutPage() {
                 </tr>
                 
                 <tr className="hover:bg-gray-50 transition">
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 bg-gray-50">
-                    所在地
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 bg-gray-50 align-top">
+                    本社所在地
                   </th>
                   <td className="px-6 py-4 text-gray-900">
                     〒131-0032<br />
                     東京都墨田区業平３丁目 石山ビル
+                  </td>
+                </tr>
+                
+                <tr className="hover:bg-gray-50 transition">
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700 bg-gray-50 align-top">
+                    支店
+                  </th>
+                  <td className="px-6 py-4 text-gray-900">
+                    <div className="space-y-3">
+                      <div>
+                        <p className="font-semibold text-gray-800 mb-1">八潮支店</p>
+                        <p className="text-sm text-gray-600">埼玉県八潮市</p>
+                      </div>
+                      <div>
+                        <p className="font-semibold text-gray-800 mb-1">マクタン支店</p>
+                        <p className="text-sm text-gray-600">フィリピン マクタン</p>
+                      </div>
+                    </div>
                   </td>
                 </tr>
                 
