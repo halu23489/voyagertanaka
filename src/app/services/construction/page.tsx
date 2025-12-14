@@ -9,12 +9,23 @@ export default function ConstructionPage() {
       <Header />
       <main className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50">
         {/* ヒーローセクション */}
-        <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div 
+          className="relative text-white py-20"
+          style={{
+            backgroundImage: 'url(/background.png)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        >
+          {/* 背景オーバーレイ */}
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/80 to-blue-800/80"></div>
+          
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center">
               <span className="text-6xl mb-4 block">🏗️</span>
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">建設・土木事業</h1>
-              <p className="text-xl md:text-2xl text-blue-100">
+              <h1 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">建設・土木事業</h1>
+              <p className="text-xl md:text-2xl text-white drop-shadow-lg">
                 安全で高品質な建設プロジェクトを実現
               </p>
             </div>
