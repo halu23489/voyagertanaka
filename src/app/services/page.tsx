@@ -66,24 +66,24 @@ export default function ServicesPage() {
 
           {/* PC: 星型レイアウト / スマホ: 縦並びレイアウト */}
           <div className="hidden lg:block">
-            <div className="relative min-h-[1100px] flex items-center justify-center my-20">
+            <div className="relative min-h-[1300px] flex items-center justify-center my-20">
               {services.map((service, index) => {
                 const angle = (index * 72 - 90) * (Math.PI / 180);
-                const radius = 400;
+                const radius = 500;
                 const x = Math.cos(angle) * radius;
                 const y = Math.sin(angle) * radius;
                 
                 return (
                   <div 
                     key={index}
-                    className="absolute w-72 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 overflow-hidden"
+                    className="absolute w-64 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 overflow-hidden"
                     style={{
                       left: '50%',
                       top: '50%',
                       transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`
                     }}
                   >
-                    <div className="relative w-full h-40">
+                    <div className="relative w-full h-32">
                       <Image
                         src={service.image}
                         alt={service.title}
@@ -91,19 +91,19 @@ export default function ServicesPage() {
                         className="object-cover"
                       />
                     </div>
-                    <div className="p-6">
-                      <div className="flex flex-col items-center gap-3 mb-4">
-                        <span className="text-5xl">{service.icon}</span>
-                        <h2 className="text-xl font-bold text-gray-900 text-center">
+                    <div className="p-4">
+                      <div className="flex flex-col items-center gap-2 mb-3">
+                        <span className="text-4xl">{service.icon}</span>
+                        <h2 className="text-lg font-bold text-gray-900 text-center">
                           {service.title}
                         </h2>
                       </div>
                       
-                      <p className="text-gray-700 leading-relaxed mb-4 text-sm">
+                      <p className="text-gray-700 leading-relaxed mb-3 text-sm">
                         {service.description}
                       </p>
                       
-                      <div className="border-t border-gray-200 pt-3">
+                      <div className="border-t border-gray-200 pt-2">
                         <h3 className="text-xs font-semibold text-gray-600 mb-2">主なサービス</h3>
                         <ul className="space-y-1">
                           {service.features.map((feature, idx) => (
@@ -115,7 +115,7 @@ export default function ServicesPage() {
                         </ul>
                       </div>
                       {(index === 0 || index === 1) && (
-                        <div className="mt-4 pt-4 border-t border-gray-200">
+                        <div className="mt-3 pt-3 border-t border-gray-200">
                           <Link 
                             href={index === 0 ? "/services/consulting" : "/services/construction"}
                             className="block text-center text-blue-600 hover:text-blue-800 font-semibold text-sm"
