@@ -91,33 +91,43 @@ export default function ConstructionPage() {
                 </ul>
               </div>
 
-              <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition">
-                <div className="flex items-center gap-4 mb-4">
-                  <span className="text-4xl">🗺️</span>
-                  <h3 className="text-xl font-bold text-gray-900">測量業務</h3>
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                <div className="relative w-full h-48">
+                  <Image
+                    src="/sokuryo.png"
+                    alt="測量業務イメージ"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  最新の測量機器と技術を用いて、正確な測量データを提供します。
-                  基準点測量から路線測量まで、あらゆる測量ニーズに対応いたします。
-                </p>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li className="flex items-start">
-                    <span className="text-blue-600 mr-2">•</span>
-                    <span>基準点測量</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-blue-600 mr-2">•</span>
-                    <span>路線測量</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-blue-600 mr-2">•</span>
-                    <span>現況測量</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-blue-600 mr-2">•</span>
-                    <span>3Dレーザー測量</span>
-                  </li>
-                </ul>
+                <div className="p-6">
+                  <div className="flex items-center gap-4 mb-4">
+                    <span className="text-4xl">🗺️</span>
+                    <h3 className="text-xl font-bold text-gray-900">測量業務</h3>
+                  </div>
+                  <p className="text-gray-700 leading-relaxed mb-4">
+                    最新の測量機器と技術を用いて、正確な測量データを提供します。
+                    基準点測量から路線測量まで、あらゆる測量ニーズに対応いたします。
+                  </p>
+                  <ul className="space-y-2 text-sm text-gray-600">
+                    <li className="flex items-start">
+                      <span className="text-blue-600 mr-2">•</span>
+                      <span>基準点測量</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-600 mr-2">•</span>
+                      <span>路線測量</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-600 mr-2">•</span>
+                      <span>現況測量</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-600 mr-2">•</span>
+                      <span>3Dレーザー測量</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
 
               <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition">
