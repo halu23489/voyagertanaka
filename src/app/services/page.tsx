@@ -29,7 +29,7 @@ export default function ServicesPage() {
     {
       title: "経理サポート事業",
       icon: "📊",
-      image: "/background.png",
+      image: "/keri.png",
       description: "帳簿作成から経理業務まで、企業の財務管理を徹底サポート。正確で迅速な処理により、経営者の負担を軽減し、本業に集中できる環境を提供いたします。",
       features: ["帳簿作成代行", "月次決算サポート", "経理業務アウトソーシング", "財務分析レポート"]
     },
@@ -114,10 +114,10 @@ export default function ServicesPage() {
                           ))}
                         </ul>
                       </div>
-                      {(index === 0 || index === 1 || index === 4) && (
+                      {(index === 0 || index === 1 || index === 3 || index === 4) && (
                         <div className="mt-3 pt-3 border-t border-gray-200">
                           <Link 
-                            href={index === 0 ? "/services/consulting" : index === 1 ? "/services/construction" : "/services/gourmet"}
+                            href={index === 0 ? "/services/consulting" : index === 1 ? "/services/construction" : index === 3 ? "/services/accounting" : "/services/gourmet"}
                             className="block text-center text-blue-600 hover:text-blue-800 font-semibold text-sm"
                           >
                             詳しく見る →
@@ -171,10 +171,10 @@ export default function ServicesPage() {
                     ))}
                   </ul>
                 </div>
-                {(index === 0 || index === 1 || index === 4) && (
+                {(index === 0 || index === 1 || index === 3 || index === 4) && (
                   <div className="mt-4 pt-4 border-t border-gray-200">
                     <Link 
-                      href={index === 0 ? "/services/consulting" : index === 1 ? "/services/construction" : "/services/gourmet"}
+                      href={index === 0 ? "/services/consulting" : index === 1 ? "/services/construction" : index === 3 ? "/services/accounting" : "/services/gourmet"}
                       className="block text-center text-blue-600 hover:text-blue-800 font-semibold text-sm"
                     >
                       詳しく見る →
