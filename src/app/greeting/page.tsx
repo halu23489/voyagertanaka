@@ -40,7 +40,7 @@ export default function GreetingPage() {
                   
                   <p className="text-gray-700 leading-relaxed mb-4">
                     私たちは、誠実さと革新性を大切にし、お客様一人ひとりに寄り添ったサービスを提供することをお約束いたします。
-                    社員一同、お客様の期待を超える価値を届けるため、日々挑戦を続けてまいります。
+                    社員一同、お客様の期待を超える価値を届けるため、日々挑戦を続けてまいります。最高のボイジャーをお楽しみください。
                   </p>
                   
                   <p className="text-gray-700 leading-relaxed mb-4">
