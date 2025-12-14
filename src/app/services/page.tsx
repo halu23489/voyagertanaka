@@ -100,10 +100,10 @@ export default function ServicesPage() {
                           ))}
                         </ul>
                       </div>
-                      {index === 1 && (
+                      {(index === 0 || index === 1) && (
                         <div className="mt-4 pt-4 border-t border-gray-200">
                           <Link 
-                            href="/services/construction"
+                            href={index === 0 ? "/services/consulting" : "/services/construction"}
                             className="block text-center text-blue-600 hover:text-blue-800 font-semibold text-sm"
                           >
                             詳しく見る →
@@ -146,10 +146,10 @@ export default function ServicesPage() {
                     ))}
                   </ul>
                 </div>
-                {index === 1 && (
+                {(index === 0 || index === 1) && (
                   <div className="mt-4 pt-4 border-t border-gray-200">
                     <Link 
-                      href="/services/construction"
+                      href={index === 0 ? "/services/consulting" : "/services/construction"}
                       className="block text-center text-blue-600 hover:text-blue-800 font-semibold text-sm"
                     >
                       詳しく見る →
