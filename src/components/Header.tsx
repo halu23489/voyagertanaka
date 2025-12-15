@@ -42,6 +42,17 @@ export default function Header() {
             <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition">
               お問い合わせ
             </Link>
+            <a 
+              href="https://oishi-tech-hct71jrhx-halu23489s-projects.vercel.app/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-gray-700 hover:text-blue-600 transition flex items-center gap-1"
+            >
+              親会社サイト
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
           </div>
           <div className="md:hidden">
             <button 
@@ -101,6 +112,18 @@ export default function Header() {
               >
                 お問い合わせ
               </Link>
+              <a 
+                href="https://oishi-tech-hct71jrhx-halu23489s-projects.vercel.app/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition px-4 py-2 rounded flex items-center gap-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                親会社サイト
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
             </div>
           </div>
         )}
