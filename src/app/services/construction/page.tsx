@@ -54,16 +54,16 @@ export default function ConstructionPage() {
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
               <div className="relative w-full h-96">
                 <Image
-                  src="/sekokanri.png"
-                  alt="施工管理イメージ"
+                  src="/yousetu.png"
+                  alt="溶接作業イメージ"
                   fill
                   className="object-cover"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">施工管理の現場</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">工業・溶接の現場</h3>
                 <p className="text-gray-600">
-                  最新の技術と豊富な経験で、安全かつ効率的な施工管理を実現します。
+                  最新の技術と豊富な経験で、高品質な溶接・工業施工を実現します。
                 </p>
               </div>
             </div>
