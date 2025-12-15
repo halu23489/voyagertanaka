@@ -43,7 +43,7 @@ export default function Header() {
               お問い合わせ
             </Link>
             <a 
-              href="https://oishi-tech-hct71jrhx-halu23489s-projects.vercel.app/" 
+              href="https://oishi-tech-4v38w78qz-halu23489s-projects.vercel.app" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-700 hover:text-blue-600 transition flex items-center gap-1"
@@ -113,7 +113,7 @@ export default function Header() {
                 お問い合わせ
               </Link>
               <a 
-                href="https://oishi-tech-hct71jrhx-halu23489s-projects.vercel.app/" 
+                href="https://oishi-tech-4v38w78qz-halu23489s-projects.vercel.app" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition px-4 py-2 rounded flex items-center gap-2"
