@@ -93,8 +93,8 @@ export default function ITPage() {
             {/* メイン画像 */}
             <div className="relative w-full h-[400px] rounded-xl overflow-hidden shadow-xl mb-12">
               <Image 
-                src="/it.png"
-                alt="IT開発"
+                src="/LINE.png"
+                alt="IoT・LINE連携開発"
                 fill
                 className="object-cover"
               />
